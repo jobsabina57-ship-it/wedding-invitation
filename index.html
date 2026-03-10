@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>John & Sabina Wedding</title>
+<title>John & Sabina's Wedding</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Montserrat:wght@300&display=swap" rel="stylesheet">
 
@@ -42,8 +41,6 @@ align-items:center;
 padding:20px;
 }
 
-/* names */
-
 .names{
 font-family:'Playfair Display',serif;
 font-size:46px;
@@ -61,8 +58,6 @@ font-size:18px;
 from{opacity:0; transform:translateY(20px);}
 to{opacity:1; transform:translateY(0);}
 }
-
-/* circle */
 
 .date-circle{
 width:230px;
@@ -100,8 +95,6 @@ opacity:0;
 transition:1s;
 }
 
-/* buttons */
-
 button{
 margin-top:15px;
 padding:12px 28px;
@@ -122,8 +115,6 @@ display:none;
 margin-top:20px;
 }
 
-/* map */
-
 .map-container{
 margin-top:40px;
 width:90%;
@@ -133,8 +124,6 @@ overflow:hidden;
 box-shadow:0 5px 20px rgba(0,0,0,0.1);
 display:none;
 }
-
-/* confetti */
 
 .confetti{
 position:fixed;
@@ -152,7 +141,6 @@ transform:translateY(100vh) rotate(360deg);
 }
 
 </style>
-
 </head>
 
 <body>
@@ -160,6 +148,7 @@ transform:translateY(100vh) rotate(360deg);
 <section>
 
 <div class="names">Sabina & John</div>
+
 <div class="subtitle">are getting married</div>
 
 <br>
@@ -196,8 +185,6 @@ Sorry, I can't attend
 
 </div>
 
-<!-- Google Map -->
-
 <div class="map-container" id="map">
 
 <iframe
@@ -214,8 +201,6 @@ src="https://www.google.com/maps?q=30.0444,31.2357&output=embed">
 </section>
 
 <script>
-
-/* reveal date */
 
 function revealDate(){
 
@@ -240,8 +225,6 @@ startConfetti()
 
 }
 
-/* countdown */
-
 const weddingDate=new Date("August 22, 2028 00:00:00").getTime()
 
 const countdown=document.getElementById("countdown")
@@ -261,8 +244,6 @@ days+" days | "+hours+" hrs | "+minutes+" min remaining"
 
 },1000)
 
-/* confetti */
-
 function startConfetti(){
 
 for(let i=0;i<70;i++){
@@ -281,11 +262,13 @@ document.body.appendChild(conf)
 
 }
 
-/* RSVP */
-
 function sendRSVP(answer){
 
+const formID="1FAIpQLSf5u0HxPQZbrlzsoCK1-JrYVVRLo-TBR0fMEhPQDbWYagItgw"
+
 alert("Thank you for your response 🤍")
+
+window.open(`https://docs.google.com/forms/d/e/${formID}/viewform`)
 
 }
 
